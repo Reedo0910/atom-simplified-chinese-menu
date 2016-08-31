@@ -1,16 +1,16 @@
 {
   "name": "atom-simplified-chinese-menu",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Atom编辑器简体中文包，提供汉化的菜单栏、右键菜单及设置项等",
   "keywords": [
-      "Localization",
-      "Simplified Chinese",
-      "Chinese",
-      "chs",
-      "简体中文",
-      "汉化",
-      "中文"
+    "Localization",
+    "Simplified Chinese",
+    "Chinese",
+    "chs",
+    "简体中文",
+    "汉化",
+    "中文"
   ],
   "repository": "https://github.com/Reedo0910/atom-simplified-chinese-menu",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
-      "cson": "3.0.1",
-      "jquery": "2.1.4"
+    "cson": "3.0.1",
+    "jquery": "2.1.4"
   }
 }
