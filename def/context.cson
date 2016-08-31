@@ -1,0 +1,116 @@
+Context:
+  "atom-workspace":
+    "application:inspect": "检查元素"
+  "atom-workspace atom-text-editor:not(.mini)":
+    "atom-beautify:beautify-editor": "使用 Atom Beautify 美化代码"
+    "atom-beautify:help-debug-editor": "复制 Atom Beautify 错误信息"
+  "atom-text-editor":
+    "activate-power-mode:toggle": "开启/关闭 activate-power-mode"
+    "color-picker:open": "色彩选取"
+    "minimap:toggle": "开启/关闭 Minimap"
+    "atom-html-preview:toggle": "HTML 预览"
+    "git-control:toggle": "开启/关闭 git-control 面板"
+    "php-cs-fixer:fix": "运行 php-cs-fixer"
+    "symbols-tree-view:toggle": "开启/关闭 定义列表面板"
+  "atom-text-editor, .overlayer":
+    "core:undo": "还原"
+    "core:redo": "重做"
+    "core:cut": "剪切"
+    "core:copy": "复制"
+    "core:paste": "粘贴"
+    "core:delete": "删除"
+    "core:select-all": "全选"
+    "pane:split-up-and-copy-active-item": "向上分割窗格 ↑"
+    "pane:split-down-and-copy-active-item": "向下分割窗格 ↓"
+    "pane:split-left-and-copy-active-item": "向左分割窗格 ←"
+    "pane:split-right-and-copy-active-item": "向右分割窗格 →"
+    "pane:close": "关闭窗格"
+  "atom-pane":
+    "pane:split-up": "向上分割窗格 ↑"
+    "pane:split-down": "向下分割窗格 ↓"
+    "pane:split-left": "向左分割窗格 ←"
+    "pane:split-right": "向右分割窗格 →"
+    "pane:close": "关闭窗格"
+  "atom-text-editor:not([mini])":
+    "encoding-selector:show": "切换编码"
+    "spell-check:correct-misspelling": "拼写检查"
+    "symbols-view:go-to-declaration": "跳转到声明"
+  "atom-pane[data-active-item-path] .item-views":
+    "tree-view:reveal-active-file": "在文件列表面板中显示项目"
+  "atom-pane[data-active-item-path] .tab.active":
+    "tree-view:reveal-active-file": "在文件列表面板中显示活跃项目"
+  ".overlayer":
+    "autocomplete:toggle": "打开/关闭 自动补全"
+    "grammar-selector:show": "显示语法选择器"
+  ".image-view":
+    "image-view:reload": "重新加载图像"
+  ".tab":
+    "tabs:close-tab": "关闭标签页"
+    "tabs:close-other-tabs": "关闭其他标签页"
+    "tabs:close-tabs-to-right": "关闭右侧标签页"
+    "tabs:close-saved-tabs": "关闭已保存的标签页"
+    "tabs:close-all-tabs": "关闭全部标签页"
+    "tabs:split-up": "向上分割窗格 ↑"
+    "tabs:split-down": "向下分割窗格 ↓"
+    "tabs:split-left": "向左分割窗格 ←"
+    "tabs:split-right": "向右分割窗格 →"
+    "tabs:open-in-new-window": "在新窗口打开"
+  ".tab-bar":
+    "pane:reopen-closed-item": "重新打开上一次关闭的项目"
+  ".tree-view.full-menu":
+    "tree-view:add-file": "新建文件"
+    "tree-view:add-folder": "新建文件夹"
+    "tree-view:move": "移动・重命名…"
+    "tree-view:duplicate": "制作副本"
+    "tree-view:remove": "刪除"
+    "tree-view:copy": "复制"
+    "tree-view:cut": "剪切"
+    "tree-view:paste": "粘贴"
+    "tree-view:open-selected-entry-up": "向上分割窗格 ↑"
+    "tree-view:open-selected-entry-down": "向下分割窗格 ↓"
+    "tree-view:open-selected-entry-left": "向左分割窗格 ←"
+    "tree-view:open-selected-entry-right": "向右分割窗格 →"
+    "application:add-project-folder": "添加项目文件夹..."
+    "tree-view:copy-full-path": "复制完整路径"
+    "tree-view:copy-project-path": "复制项目路径"
+    "tree-view:open-in-new-window": "在新窗口中打开"
+  '.tree-view.full-menu [is="tree-view-file"]':
+    "tree-view:open-selected-entry-up": "向上分割窗格 ↑"
+    "tree-view:open-selected-entry-down": "向下分割窗格 ↓"
+    "tree-view:open-selected-entry-left": "向左分割窗格 ←"
+    "tree-view:open-selected-entry-right": "向右分割窗格 →"
+  ".tree-view.full-menu .project-root > .header":
+    "tree-view:add-file": "新建文件"
+    "tree-view:add-folder": "新建文件夹"
+    "tree-view:move": "移动・重命名…"
+    "tree-view:duplicate": "制作副本"
+    "tree-view:remove": "刪除"
+    "tree-view:copy": "复制"
+    "tree-view:cut": "剪切"
+    "tree-view:paste": "粘贴"
+    "tree-view:open-selected-entry-up": "向上分割窗格 ↑"
+    "tree-view:open-selected-entry-down": "向下分割窗格 ↓"
+    "tree-view:open-selected-entry-left": "向左分割窗格 ←"
+    "tree-view:open-selected-entry-right": "向右分割窗格 →"
+    "application:add-project-folder": "添加项目文件夹"
+    "tree-view:remove-project-folder": "移除项目文件夹"
+    "tree-view:copy-full-path": "复制完整路径"
+    "tree-view:copy-project-path": "复制项目路径"
+    "tree-view:open-in-new-window": "在新窗口中打开"
+  ".platform-darwin .tree-view.full-menu":
+    "tree-view:show-in-file-manager": "在Finder中显示"
+  ".platform-win32 .tree-view.full-menu":
+    "tree-view:show-in-file-manager": "在资源管理器中显示"
+  ".platform-linux .tree-view.full-menu":
+    "tree-view:show-in-file-manager": "在文件管理器中显示"
+  ".tree-view > li.directory":
+    "project-find:show-in-current-directory": "在文件夹中查找"
+  ".tree-view.multi-select":
+    "tree-view:remove": "刪除"
+    "tree-view:copy": "复制"
+    "tree-view:cut": "剪切"
+    "tree-view:paste": "粘贴"
+  ".tree-view .file > .name":
+    "atom-beautify:beautify-file": "使用 Atom Beautify 美化代码"
+  ".tree-view":
+    "html-include-resource:include": "引用"
