@@ -1,4 +1,4 @@
-Copyright (c) 2016 <Zeee>
+Copyright (c) 2016 Reedo0910 <Zeee>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

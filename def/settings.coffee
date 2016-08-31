@@ -5,6 +5,8 @@ module.exports =
     pref = $('.settings-view')
 
     pref.find('a.icon.icon-settings').html('通用设置')
+    pref.find('a.icon.icon-code').html('编辑')
+    pref.find('a.icon.device-desktop').html('系统')
     pref.find('a.icon.icon-keyboard').html('快捷键设置')
     pref.find('a.icon.icon-package').html('扩展插件')
     pref.find('a.icon.icon-paintcan').html('主题')
