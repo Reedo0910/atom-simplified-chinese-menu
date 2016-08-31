@@ -4,15 +4,15 @@ module.exports =
     $ = require 'jquery'
     pref = $('.settings-view')
 
-    pref.find('a.icon.icon-settings').html('通用设置')
+    pref.find('a.icon.icon-settings').html('常用')
     pref.find('a.icon.icon-code').html('编辑')
-    pref.find('a.icon.device-desktop').html('系统')
-    pref.find('a.icon.icon-keyboard').html('快捷键设置')
-    pref.find('a.icon.icon-package').html('扩展插件')
+    pref.find('a.icon.icon-device-desktop').html('系统')
+    pref.find('a.icon.icon-keyboard').html('快捷键')
+    pref.find('a.icon.icon-package').html('扩展')
     pref.find('a.icon.icon-paintcan').html('主题')
     pref.find('a.icon.icon-cloud-download').html('更新')
-    pref.find('a.icon.icon-plus').html('下载插件/主题')
-    pref.find('button.icon.icon-link-external:contains("Open Config Folder")').html('打开设置文件夹')
+    pref.find('a.icon.icon-plus').html('下载')
+    pref.find('button.icon.icon-link-external:contains("Open Config Folder")').html('打开设置目录')
 
     # Init
     # localizeSettings()
@@ -64,7 +64,7 @@ localizeSettings = () ->
     pref = $('.settings-view')
 
     # Core Settings
-    pref.find('div.block.section-heading.icon.icon-gear:contains("Core Settings")').html('核心设置')
+    pref.find('div.block.section-heading.icon.icon-settings:contains("Core Settings")').html('核心设置')
     pref.find('#core-settings-note').html('以下為文字編輯功能以外的 Atom 功能設定，個別擴充套件可能有自己的設定。若要瀏覽某個擴充套件的設定，請到「<a class="link packages-open">已安裝的擴充套件</a>」卡片清單中選擇該套件的設定。')
 
     pref.find('label[for="core.allowPendingPaneItems"]').children('.setting-title').html('啟用未決頁籤功能')
@@ -289,8 +289,8 @@ localizeInstall = () ->
   # console.log 'add Packages'
 
   si = setInterval((->
-    pref.find('.section-heading.icon.icon-cloud-download:contains("Install Packages")').html('下载扩展插件')
-    pref.find('.section-heading.icon.icon-cloud-download:contains("Install Themes")').html('下载主题')
+    pref.find('.section-heading.icon.icon-plus:contains("Install Packages")').html('下载扩展插件')
+    pref.find('.section-heading.icon.icon-plus:contains("Install Themes")').html('下载主题')
 
     temp = pref.find('span:contains("Packages are published to ")').parent().children()
     temp.eq(1).html('扩展插件均发布在 ')
