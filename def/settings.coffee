@@ -4,7 +4,7 @@ module.exports =
     $ = require 'jquery'
     pref = $('.settings-view')
 
-    pref.find('a.icon.icon-settings').html('常用')
+    pref.find('a.icon.icon-settings').html('功能')
     pref.find('a.icon.icon-code').html('编辑')
     pref.find('a.icon.icon-device-desktop').html('系统')
     pref.find('a.icon.icon-keyboard').html('快捷键')
@@ -14,26 +14,7 @@ module.exports =
     pref.find('a.icon.icon-plus').html('安装扩展包/主题')
     pref.find('button.icon.icon-link-external:contains("Open Config Folder")').html('打开设置目录')
 
-    # Init
-    # localizeSettings()
-    # localizeKeybindings()
-    # localizePackages()
-    # localizeThemes()
-    # localizeUpdates()
-    # localizeInstall()
-    # localizeButtons()
-
     if pref.find('.panels').children().length < 8
-
-      # On switch panels
-      # pref.find('.panels-menu li a').unbind('click').click ->
-      #   localizeSettings() if pref.find('.panels-menu .active').attr('name') is 'Settings'
-      #   localizeKeybindings() if pref.find('.panels-menu .active').attr('name') is 'Keybindings'
-      #   localizePackages() if pref.find('.panels-menu .active').attr('name') is 'Packages'
-      #   localizeThemes() if pref.find('.panels-menu .active').attr('name') is 'Themes'
-      #   localizeUpdates() if pref.find('.panels-menu .active').attr('name') is 'Updates'
-      #   localizeInstall() if pref.find('.panels-menu .active').attr('name') is 'Install'
-      #   return
 
       # Assign font(s) while running under Windows OS
       if process.platform == 'win32'
@@ -51,6 +32,8 @@ module.exports =
 
       # Init
       localizeSettings()
+      localizeEditings()
+      localizeSystems()
       localizeKeybindings()
       localizePackages()
       localizeThemes()
@@ -63,8 +46,9 @@ localizeSettings = () ->
     $ = require 'jquery'
     pref = $('.settings-view')
 
-    # Core Settings
-    pref.find('.block.section-heading.icon.icon-settings:contains("Core Settings")').html('核心设置')
+    console.log('setting')
+
+    pref.find('div.block.section-heading.icon.icon-settings:contains("Core Settings")').html('核心设置')
     pref.find('#core-settings-note').html('以下为文字编辑功能以外的 Atom 功能设置，个别扩展包可能包含自己的设置。若要浏览某个扩展包的设置，请到「<a class="link packages-open">已安装的扩展包</a>」卡片列表中选择该扩展包的设置。')
 
     pref.find('label[for="core.allowPendingPaneItems"]').children('.setting-title').html('允许挂起窗格项目')
@@ -94,12 +78,21 @@ localizeSettings = () ->
     pref.find('label[for="core.openEmptyEditorOnStart"]').children('.setting-title').html('启动时打开空白的编辑器')
     pref.find('label[for="core.openEmptyEditorOnStart"]').next('.setting-description').html('启动 Atom 时自动打开空白的编辑器。')
 
+    pref.find('atom-text-editor[id="core.packagesWithKeymapsDisabled"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('禁用带键盘映射的扩展包')
+
     pref.find('atom-text-editor[id="core.projectHome"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('默认的项目根目录')
     pref.find('atom-text-editor[id="core.projectHome"]').parents('.controls').eq(0).prev('label').children('.setting-description').html('所有项目都假定被放在该目录下。使用 Package Generator 生成的扩展包原始文件也会被放在该目录下。')
 
-    # Editor Settings
-    pref.find('div.block.section-heading.icon.icon-gear:contains("Editor Settings")').html('编辑器设置')
+
+
+localizeEditings = () ->
+    $ = require 'jquery'
+    pref = $('.settings-view')
+
+    pref.find('div.block.section-heading.icon.icon-code:contains("Editor Settings")').html('编辑器设置')
     pref.find('#editor-settings-note').html('以下为文字编辑相关的设置。部分设置可能会被相关编程语言的扩展包所覆盖。如果要浏览编程语言的扩展包设置，请到「<a class="link packages-open">已安装的扩展包</a>」卡片列表中设置该语言。')
+
+    pref.find('label[for="editor.atomicSoftTabs"]').next('.setting-description').html('在移动光标经过前置的空格时，跳过一个制表符(tab)的长度。')
 
     pref.find('label[for="editor.autoIndent"]').children('.setting-title').html('自动缩进')
     pref.find('label[for="editor.autoIndent"]').next('.setting-description').html('在新增行时自动缩进游标，使其对齐上一行。')
@@ -166,7 +159,7 @@ localizeSettings = () ->
     pref.find('label[for="editor.softWrapAtPreferredLineLength"]').children('.setting-title').html('在指定长度换行')
     pref.find('label[for="editor.softWrapAtPreferredLineLength"]').next('.setting-description').html('文字长度超过<code>每一行的长度</code>内的数值时，自动换行。这项设置只有在<code>自动换行</code>设置打勾时，或菜单栏 > 查看 > 自动换行启用时才有效果。')
 
-    pref.find('atom-text-editor[id="editor.softWrapHangingIndent"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('自动换行时的凸排长度')
+    pref.find('atom-text-editor[id="editor.softWrapHangingIndent"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('悬挂缩进')
     pref.find('atom-text-editor[id="editor.softWrapHangingIndent"]').parents('.controls').eq(0).prev('label').children('.setting-description').html('<code>自动换行</code>设置打勾时，第二行以下额外缩进的长度，单位：字符。')
 
     pref.find('atom-text-editor[id="editor.tabLength"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('制表符 (tab) 长度')
@@ -183,6 +176,24 @@ localizeSettings = () ->
 
     pref.find('label[for="editor.zoomFontWhenCtrlScrolling"]').children('.setting-title').html('使用 Ctrl + 鼠标滚轮缩放文字大小')
     pref.find('label[for="editor.zoomFontWhenCtrlScrolling"]').next('.setting-description').html('使用 Ctrl 键和鼠标滚轮上下滚动改变编辑器内的文字大小。')
+
+
+
+localizeSystems = () ->
+  $ = require 'jquery'
+  pref = $('.settings-view')
+
+  pref.find('div.block.section-heading.icon.icon-device-desktop:contains("System Settings")').html('系统设置')
+  pref.find('div.block.section-heading.icon.icon-device-desktop').next('.text.icon.icon-question').html('这些设置决定了 Atom 与您的操作系统的集成方式。')
+
+  pref.find('label[for="system.windows.file-handler"]').children('.setting-title').html('注册 Atom 为文件处理程序')
+  pref.find('label[for="system.windows.file-handler"]').children('.setting-description').html('在「打开方式」程序列表中显示 Atom ，以方便与文件类型关联。')
+
+  pref.find('label[for="system.windows.shell-menu-files"]').children('.setting-title').html('在 文件 右键菜单中显示 Atom')
+  pref.find('label[for="system.windows.shell-menu-files"]').children('.setting-description').html('在文件管理器中的 文件 右键菜单中添加「使用 Atom 打开(Open with Atom)」选项。')
+
+  pref.find('label[for="system.windows.shell-menu-folders"]').children('.setting-title').html('在 文件夹 右键菜单中显示 Atom')
+  pref.find('label[for="system.windows.shell-menu-folders"]').children('.setting-description').html('在文件管理器中的 文件夹 右键菜单中添加「使用 Atom 打开(Open with Atom)」选项。')
 
 
 
@@ -238,7 +249,7 @@ localizeThemes = () ->
   $ = require 'jquery'
   pref = $('.settings-view')
 
-  pref.find('.section-heading.icon.icon-device-desktop:contains("Choose a Theme")').html('选择一个主题')
+  pref.find('.section-heading.icon.icon-paintcan:contains("Choose a Theme")').html('选择一个主题')
 
   temp = pref.find('.themes-panel div.text.native-key-bindings').children()
   temp.eq(0).html('您也能直接修改&nbsp;')
@@ -248,7 +259,7 @@ localizeThemes = () ->
   pref.find('label > div.setting-title.themes-label.text').eq(0).html('界面主题')
   pref.find('label > div.setting-description.text.theme-description').eq(0).html('标签页、状态栏、文件列表面板、下拉菜单的外观。')
 
-  pref.find('label > div.setting-title.themes-label.text').eq(1).html('语法主题')
+  pref.find('label > div.setting-title.themes-label.text').eq(1).html('代码主题')
   pref.find('label > div.setting-description.text.theme-description').eq(1).html('代码语法的顏色与文字编辑器的外观。')
 
   temp = pref.find('.section-heading.icon.icon-paintcan:contains("Installed Themes")')
@@ -283,7 +294,7 @@ localizeInstall = () ->
   $ = require 'jquery'
   pref = $('.settings-view')
 
-  # console.log 'add Packages'
+ # console.log("install")
 
   si = setInterval((->
     pref.find('.section-heading.icon.icon-plus:contains("Install Packages")').html('安装扩展包')
@@ -310,8 +321,6 @@ localizeInstall = () ->
 localizeButtons = () ->
   $ = require('jquery')
   pref = $('.settings-view')
-
-  # console.log 'buttons'
 
   si = setInterval((->
     pref.find('button:contains("Packages")').html '扩展包'

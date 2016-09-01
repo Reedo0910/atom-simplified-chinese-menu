@@ -98,6 +98,13 @@ Menu:
 						value: "刪除行"
 					"Join Lines":
 						value: "合并行"
+			Columns:
+				value: "列"
+				submenu:
+					"Move Selection Left":
+						value: "向左移动所选对象"
+					"Move Selection Right":
+						value: "向右移动所选对象"
 			Text:
 				value: "文本"
 				submenu:
@@ -298,7 +305,7 @@ Menu:
 			"Bring All to Front":
 				value: "全部移至最顶端"
 	Help:
-		value: "说明"
+		value: "帮助"
 		submenu:
 			"Terms of Use":
 			  value: "使用条款"
@@ -312,8 +319,6 @@ Menu:
 				value: "社区讨论"
 			"Report Issue":
 				value: "报告问题"
-			"Check For Update"
-				value: "检查更新"
 			"Search Issues":
 				value: "搜索已知问题"
 			"Release Notes":

@@ -87,6 +87,13 @@ Menu:
 						value: "刪除行(&E)"
 					"&Join Lines":
 						value: "合并行(&J)"
+			Columns:
+				value: "列"
+				submenu:
+					"Move Selection &Left":
+						value: "向左移动所选对象(&L)"
+					"Move Selection &Right":
+						value: "向右移动所选对象(&R)"
 			Text:
 				value: "文本"
 				submenu:
@@ -280,12 +287,12 @@ Menu:
 	"&Packages":
 		value: "扩展包(&P)"
 	"&Help":
-		value: "说明(&H)"
+		value: "帮助(&H)"
 		submenu:
 			"View &Terms of Use":
-			  value: "使用条款"
+			    value: "使用条款"
 			"View &License":
-			  value: "查看许可证"
+			    value: "查看许可证"
 			"&Documentation":
 				value: "说明文件(&D)"
 			Roadmap:
