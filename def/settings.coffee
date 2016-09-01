@@ -23,7 +23,7 @@ module.exports =
     # localizeInstall()
     # localizeButtons()
 
-    if pref.find('.panels').children().length < 6
+    if pref.find('.panels').children().length < 8
 
       # On switch panels
       # pref.find('.panels-menu li a').unbind('click').click ->
