@@ -287,7 +287,7 @@ Menu:
 			"Toggle Symbols-Tree-View":
 				value: "显示/隐藏 定义列表面板"
 	Packages:
-		value: "扩展插件"
+		value: "扩展包"
 	Window:
 		value: "窗口"
 		submenu:

@@ -2,7 +2,7 @@
   "name": "atom-simplified-chinese-menu",
   "main": "./lib/main",
   "version": "0.2.2",
-  "description": "Atom编辑器简体中文包，提供汉化的菜单栏、右键菜单及设置项等",
+  "description": "Atom简体中文语言包，提供最新的菜单栏、右键菜单及设置完整汉化",
   "keywords": [
     "Localization",
     "Simplified Chinese",

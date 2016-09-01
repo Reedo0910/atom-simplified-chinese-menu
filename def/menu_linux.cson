@@ -274,7 +274,7 @@ Menu:
 			"Find Modified File":
 				value: "查找修改过的文件"
 	"&Packages":
-		value: "扩展插件(&P)"
+		value: "扩展包(&P)"
 	"&Help":
 		value: "说明(&H)"
 		submenu:
