@@ -9,7 +9,6 @@
     "Chinese",
     "chs",
     "简体中文",
-    "汉化",
     "中文"
   ],
   "repository": {
@@ -18,7 +17,7 @@
   },
   "license": "MIT",
   "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+    "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
     "cson": "3.0.1",
