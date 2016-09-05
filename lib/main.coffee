@@ -40,19 +40,19 @@ module.exports =
         item.label = label if label?
 
   updateSettings: (def) ->
-    settings = require './../def/settings'
+    settings = require ('./../def/settings')
     settings.localize()
 
     atom.workspace.onDidOpen (settings) ->
       if settings?
         if settings.uri?
           if settings.uri.indexOf('atom://config') isnt -1
-            settings = require './../def/settings'
+            settings = require ('./../def/settings')
             settings.localize()
 
     atom.workspace.onDidChangeActivePaneItem (settings) ->
       if settings?
         if settings.uri?
           if settings.uri.indexOf('atom://config') isnt -1
-            settings = require './../def/settings'
+            settings = require ('./../def/settings')
             settings.localize()
