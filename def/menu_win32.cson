@@ -12,8 +12,6 @@ Menu:
 				value: "打开文件夹..."
 			"Add Project Folder…":
 				value: "添加项目文件夹..."
-			"Reopen Last &Item":
-				value: "重新打开上一次项目(&I)"
 			"Open Recent":
 				value: "最近打开的文件..."
 				submenu:
@@ -21,7 +19,7 @@ Menu:
 						value: "重新打开上次关闭的文件"
 					"Clear List":
 						value: "清除列表"
-            "Reopen Project":
+			"Reopen Project":
 				value: "重新打开项目..."
 				submenu:
 					"Clear Project History":
