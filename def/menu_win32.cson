@@ -21,6 +21,11 @@ Menu:
 						value: "重新打开上次关闭的文件"
 					"Clear List":
 						value: "清除列表"
+            "Reopen Project":
+				value: "重新打开项目..."
+				submenu:
+					"Clear Project History":
+						value: "清除项目历史"
 			"Se&ttings":
 				value: "偏好设定(&T)..."
 			"Config…":
@@ -268,6 +273,8 @@ Menu:
 				value: "在项目中查找..."
 			"Toggle Find in Project":
 				value: "显示/隐藏 项目查找面板"
+			"Find All":
+				value: "查找全部"
 			"Find Next":
 				value: "查找下一项"
 			"Find Previous":

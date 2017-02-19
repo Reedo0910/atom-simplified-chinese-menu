@@ -83,6 +83,20 @@ localizeSettings = () ->
     pref.find('atom-text-editor[id="core.projectHome"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('默认的项目根目录')
     pref.find('atom-text-editor[id="core.projectHome"]').parents('.controls').eq(0).prev('label').children('.setting-description').html('所有项目都假定被放在该目录下。使用 Package Generator 生成的扩展包原始文件也会被放在该目录下。')
 
+    pref.find('atom-text-editor[id="core.reopenProjectMenuCount"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('「重新打开项目」菜单的条目数')
+    pref.find('atom-text-editor[id="core.reopenProjectMenuCount"]').parents('.controls').eq(0).prev('label').children('.setting-description').html('在「重新打开项目」菜单中显示多少个最近的项目。')
+
+    pref.find('label[for="core.restorePreviousWindowsOnStart"]').children('.setting-title').html('在启动时恢复之前打开的窗口')
+    pref.find('label[for="core.restorePreviousWindowsOnStart"]').next('.setting-description').html('当选中时，通过图标启动或通过命令行自身的<code>atom</code>命令启动Atom时，恢复所有Atom窗口的最后状态; 否则加载空白环境。')
+
+    pref.find('select[id="core.telemetryConsent"]').prev('label').children('.setting-title').html('向Atom小组发送遥测')
+    pref.find('select[id="core.telemetryConsent"]').prev('label').children('.setting-description').html('允许将使用统计信息和例外报告发送到Atom小组，以帮助改进产品。')
+    pref.find('select[id="core.telemetryConsent"]').children('option[value="limited"]').html('允许有限的匿名使用统计信息、异常和崩溃报告')
+    pref.find('select[id="core.telemetryConsent"]').children('option[value="no"]').html('不发送任何遥测数据')
+    pref.find('select[id="core.telemetryConsent"]').children('option[value="undecided"]').html('未定（Atom会在下次启动时再次询问）')
+
+    pref.find('atom-text-editor[id="core.warnOnLargeFileLimit"]').parents('.controls').eq(0).prev('label').children('.setting-title').html('大文件限制警告')
+    pref.find('atom-text-editor[id="core.warnOnLargeFileLimit"]').parents('.controls').eq(0).prev('label').children('.setting-description').html('在打开大于此兆字节数的文件之前警告。')
 
 
 localizeEditings = () ->
