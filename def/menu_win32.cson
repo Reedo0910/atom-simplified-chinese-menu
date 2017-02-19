@@ -17,6 +17,8 @@ Menu:
 				submenu:
 					"Clear Project History":
 						value: "清除项目历史"
+			"Reopen Last &Item":
+ 				value: "重新打开上一次项目(&I)"
 			"Open Recent":
 				value: "最近打开的文件..."
 				submenu:
